@@ -1,0 +1,11 @@
+# [START runtime]
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT foosball_tracker.wsgi
+
+beta_settings:
+    cloud_sql_instances: foosball-tracker-192807:us-west1:foosball-tracker
+
+runtime_config:
+  python_version: 3
+# [END runtime]
