@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.views.generic import ListView
+from .models import Player
 
-# Create your views here.
+
+class RankingsView(ListView):
+    model = Player
+    ordering = ['-mu']
