@@ -97,6 +97,11 @@ else:
         }
     }
 
+DATABASES['default']['HOST'] = '/cloudsql/foosball-tracker-192807:us-west1:foosball-tracker'
+if os.getenv('GAE_INSTANCE'):
+    pass
+else:
+    DATABASES['default']['HOST'] = '127.0.0.1'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
