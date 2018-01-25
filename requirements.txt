@@ -1,3 +1,4 @@
 django
 trueskill
 gunicorn
+psycopg2
