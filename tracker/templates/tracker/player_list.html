@@ -5,26 +5,26 @@
     <title>Player Rankings</title>
 </head>
 <body>
-<h2>Players</h2>
-<table border="1">
-    <thead>
-    <td>Rank</td>
-    <td>Name</td>
-    <td>Mu</td>
-    <td>Sigma</td>
-    <td>Wins</td>
-    <td>Losses</td>
-    </thead>>
-    {% for player in object_list %}
-        <tr>
-            <td>{{ forloop.counter }}</td>
-            <td>{{ player.name }}</td>
-            <td>{{ player.mu }}</td>
-            <td>{{ player.sigma }}</td>
-            <td>{{ player.wins }}</td>
-            <td>{{ player.losses }}</td>
-        </tr>
-    {% endfor %}
-</table>
+    <h2>Players</h2>
+    <table border="1">
+        <thead>
+        <td>Rank</td>
+        <td>Name</td>
+        <td>Mu</td>
+        <td>Sigma</td>
+        <td>Wins</td>
+        <td>Losses</td>
+        </thead>
+        {% for player in object_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ player.name }}</td>
+                <td>{{ player.mu }}</td>
+                <td>{{ player.sigma }}</td>
+                <td>{{ player.wins }}</td>
+                <td>{{ player.losses }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
